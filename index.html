@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instagram Page Excersise with Bootstrap</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="container-fluid p-3">
+          <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+          </button>
+            <div class="row">
+                <div class="col-9 d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    <h5>Instagram</h5>
+                </div>
+                <div class="col-2 justify-content">
+                    <button type="button" class="btn btn-success rounded" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button> 
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Caption:</label>
+                                  <textarea class="form-control" placeholder="Add the caption of your post here" id="message-text"></textarea>
+                                  <div class="pt-3">
+                                      <button type="button" class="btn btn-light border me-1">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                              <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                              <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                                            </svg>
+                                        </button>
+                                      <button type="button" class="btn btn-light border me-1">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                            </svg>
+                                        </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>               
+                </div>
+                <div class="col-1 d-flex justify-content">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"></path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy & Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center fs-5 mb-3">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 64v64H64V96h88zm56 0h88v64H208V96zm240 0v64H360V96h88zM64 224h88v64H64V224zm232 0v64H208V224h88zm64 0h88v64H360V224zM152 352v64H64V352h88zm56 0h88v64H208V352zm240 0v64H360V352h88z"/></svg>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z"/></svg>
+                            </button>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="card-group d-flex align-items-center>
+                        <div class="card m-2" style="width: 18rem;">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                      <td scope="row">
+                                        <div class="wrap">
+                                          <div class="display">
+                                           <img src="black_blue_butterfly.jpg"></img>
+                                             <div class="caption">
+                                                 <div id="txt_stl">
+                                                  Female Eastern Tiger Swallowtail, Dark Morph (Papilio glaucus)
+                                                 </div>
+                                             </div>
+                                         </div>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="wrap">
+                                          <div class="display">
+                                           <img src="black_butterfly.jpg"></img>
+                                             <div class="caption">
+                                                 <div id="txt_stl">
+                                                  Parantica aspasia, the yellow glassy tiger
+                                                 </div>
+                                             </div>
+                                         </div>
+                                        </div>                                      </td>
+                                      <td>
+                                        <div class="wrap">
+                                          <div class="display">
+                                           <img src="black_pink_butterfly.jpg"></img>
+                                             <div class="caption">
+                                                 <div id="txt_stl">
+                                                  Parides photinus, the pink-spotted cattleheart
+                                                 </div>
+                                             </div>
+                                         </div>
+                                        </div>                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="black_yellow_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                    Common Birdwing (Troides helena cerberus)
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                         </td>
+                                        <td>
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="blue_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                    Peleides blue morpho
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                        </td>
+                                        <td>
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="colourful_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                    Cairns birdwing (Ornithoptera euphorion)
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="orange_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                      Monarch butterfly
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                        </td>
+                                        <td>
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="white_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                    Male Eastern Tiger Swallowtail (Papilio glaucus)
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                        </td>
+                                        <td>
+                                          <div class="wrap">
+                                            <div class="display">
+                                             <img src="zebra_butterfly.jpg"></img>
+                                               <div class="caption">
+                                                   <div id="txt_stl">
+                                                    Paper kite butterfly (Idea leuconoe)
+                                                   </div>
+                                               </div>
+                                           </div>
+                                          </div>                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile">
+              <div class="card my-4 mx-auto" style="width: 35rem;">
+                <div class="card-header d-flex justify-content-between bg-white">
+                  <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Female Eastern Tiger Swallowtail, Dark Morph (Papilio glaucus)</p>
+                </div>
+                <img src="black_blue_butterfly.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">
+                    <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                    <p>Females are dimorphic. The yellow morph differs from the male in having a blue postmedian area on the dorsal hind wing. In the dark morph, the areas that are normally yellow are replaced with dark gray or black. The bluish postmedian area on the ventral hind wing has one row of orange spots.</p>
+                    <p class="fs-5 text-muted">2 days ago</p>
+                  </p>
+                </div>
+              </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Parantica aspasia, the yellow glassy tiger</p>
+                  </div>
+                  <img src="black_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>Parantica aspasia, the yellow glassy tiger, is a butterfly found in Asia that belongs to the crows and tigers, that is, the danaid group of the brush-footed butterflies family. Adults can be found all year around, with a peak in September-October and in December.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Beautiful Butterfly in Pink and Black</p>
+                  </div>
+                  <img src="black_pink_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>The Pink-spotted Cattleheart Butterfly, also called the Red-spotted Cattleheart, is found from Mexico to Costa Rica. It looks a little similar to the female Pale-spotted and Pink-spotted Swallowtails, Papilio erostratus/rogeri, but the hind wing crescents do not reach the wing edge and the spots are darker red.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Common Birdwing (Troides helena cerberus)</p>
+                  </div>
+                  <img src="black_yellow_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>Common Birdwing has a distinctive golden yellow hindwings with black margins. Female has a full series of large black sub-marginal spots. Male has one or more smaller sub-marginal spots.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Peleides blue morpho</p>
+                  </div>
+                  <img src="blue_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>The brilliant blue color in the butterfly's wings is caused by the diffraction of the light from millions of tiny scales on its wings. It uses this to frighten away predators, by flashing its wings rapidly. The wingspan of the blue morpho butterfly ranges from 7.5–20 cm (3.0–7.9 in). The entire blue morpho butterfly life cycle, from egg to adult is only 115 days.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Cairns birdwing (Ornithoptera euphorion)</p>
+                  </div>
+                  <img src="colourful_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>The Cairns birdwing is a species of birdwing butterfly endemic to Queensland, and is Australia's largest endemic butterfly species. Males have a predominantly black upper wing with emerald green flashes, however the female lacks the green colouring, having a plain black upper wing with white patches. The female is the larger of the two sexes.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Monarch butterfly</p>
+                  </div>
+                  <img src="orange_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>The Monarch Butterfly is amongst the most familiar of North American butterflies and an iconic pollinator. The eastern North American monarch population is notable for its annual southward late-summer/autumn instinctive migration from the northern and central United States and southern Canada to Florida and Mexico. During the fall migration, monarchs cover thousands of miles, with a corresponding multigenerational return north in spring. </p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Male Eastern Tiger Swallowtail (Papilio glaucus)</p>
+                  </div>
+                  <img src="white_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>Butterflies with elegant projections extending from their hind wings are known as “swallowtails”; the swallowtails can be seen clearly here. However as a butterfly ages, the outer edges of its wings start to wear away. The thin, little swallowtails are usually the first to go. So you may find yourself looking at a swallowtail species without seeing any swallowtails at all. The “tiger” part of this butterfly’s name comes from the four black stripes that start at the outer, front edge of its wings</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card my-4 mx-auto" style="width: 35rem;">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <p class="fs-5"><i class="bi bi-person-fill fs-2"></i>Paper kite butterfly (Idea leuconoe)</p>
+                  </div>
+                  <img src="zebra_butterfly.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <i class="bi bi-heart-fill text-danger"></i> <strong> 3.000 likes</strong>
+                      <p>The Paper Kite (Idea leuconoe) butterfly is a large white and black patterned relative of the Monarch. It's native to southeast Asia. Like its cousin the Monarch, Paper Kite caterpillars feed on poisonous plants making them and the subsequent butterfly unpalatable to predators.</p>
+                      <p class="fs-5 text-muted">2 days ago</p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script>let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 10 ||
+          document.documentElement.scrollTop > 10
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+      
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }</script>
+</html>
