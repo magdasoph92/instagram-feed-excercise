@@ -5,11 +5,16 @@
     position: relative;
     -webkit-box-shadow: 5px 5px 5px #111;
     box-shadow: 5px 5px 5px #111;  
-    }
+  }
+
+  .container-fluid {
+    margin: auto;
+  }
+  
 .display {
   position: relative;
   overflow: hidden;
-    }
+  }
 
 .caption {
   position: absolute;
@@ -43,12 +48,22 @@
     display: none;
   }
 
-  #pills-home-tab {
-    background-color: #fff;
+  #nav-home-tab {
+    background-color: none;
   }
 
-  #pills-profile-tab {
-    background-color: #fff;
+  #nav-profile-tab {
+    background-color: none;
   }
+
+
+  .dark-mode {
+    background-color: black;
+  }
+  
+  .light-mode {
+    background-color:white;
+  }
+  
 
   
